@@ -7,7 +7,8 @@
 - run `npm install`
 - run `createdb todos`
 - configure config.json file with your postgreSQL environment
-  - touch config.json
+  - mkdir `config` 
+  - touch `config/config.json`
   - add the following code snippet
   ```
   {
