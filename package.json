@@ -1,0 +1,29 @@
+{
+  "name": "express-server-postgresql-tutorial",
+  "version": "1.0.0",
+  "description": "[Intermediate] Express Server, PostgresSQL, REST API",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon ./bin/www.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junior-devleague/express-server-postgresql-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junior-devleague/express-server-postgresql-tutorial/issues"
+  },
+  "homepage": "https://github.com/junior-devleague/express-server-postgresql-tutorial#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.22.6"
+  }
+}
