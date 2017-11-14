@@ -3,7 +3,7 @@
 
 ## Setup
 - Fork and Clone
-- run `npm inity --yes`
+- run `npm init --yes`
 - run `npm install`
 - run `createdb todos`
 - configure config.json file with your postgreSQL environment
