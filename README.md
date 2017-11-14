@@ -1,4 +1,4 @@
-# express-server-postgresql-tutorial
+# Rest API with PostgreSQL Demo
 [Intermediate] Express Server, PostgresSQL, REST API
 
 ## Setup
