@@ -2,6 +2,8 @@ const Todo = require('../models').Todo;
 const TodoItem = require('../models').TodoItem;
 
 module.exports = {
+
+  // Creates a Todo
   create(req, res) {
     return Todo
       .create({
@@ -10,6 +12,8 @@ module.exports = {
       .then(todo => res.status(201).send(todo))
       .catch(error => res.status(400).send(error));
   },
+
+  // List All Todos
   list(req, res) {
     return Todo
       .findAll({
@@ -21,6 +25,7 @@ module.exports = {
       .then(todos => res.status(200).send(todos))
       .catch(error => res.status(400).send(error));
   },
+  // Retrieves One Todo
   retrieve(req, res) {
     return Todo
       .findById(req.params.todoId, {
@@ -39,6 +44,8 @@ module.exports = {
       })
       .catch(error => res.status(400).send(error));
   },
+
+  // Edit a Todo
   update(req, res) {
     return Todo
       .findById(req.params.todoId, {
@@ -62,6 +69,8 @@ module.exports = {
       })
       .catch((error) => res.status(400).send(error));
   },
+
+  // Delete a Todo
   destroy(req, res) {
     return Todo
       .findById(req.params.todoId)
