@@ -3,11 +3,12 @@
 
 ## Setup
 - Fork and Clone
-- run `npm inity --yes`
+- run `npm init --yes`
 - run `npm install`
 - run `createdb todos`
 - configure config.json file with your postgreSQL environment
-  - touch config.json
+  - mkdir `config` 
+  - touch `config/config.json`
   - add the following code snippet
   ```
   {
@@ -28,6 +29,7 @@ We will have two models `Todo` and `TodoItem`. The relationship between to the w
 
 ## API Endpoints
 Run the following on Postman
+
 `Todo` Endpoints:
 - POST `127.0.0.1:8000/api/todos/`
 - GET(List all) `127.0.0.1:8000/api/todos/`
