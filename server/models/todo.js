@@ -12,6 +12,5 @@ module.exports = (sequelize, DataTypes) => {
       as: 'todoItems',
     });
   };
-
   return Todo;
 };
