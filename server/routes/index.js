@@ -21,30 +21,30 @@ router.route('/todos')
         as: 'todoItems',
       }],
     })
-     .then((todo) => res.send(todo))
+     .then(todo => res.send(todo))
      .catch(error => res.send(error));
   })
 
-// router.route('/todos/:id')
-//   // Get a specific todo
-//   .get((req, res) => {
-//     Todo.findById({
-//       req.params.todoId, {
-//         include: [{
-//           model: TodoItem,
-//           as: 'todoItems',
-//         }],
-//       })
-//       .then(todo => {
-//         if (!todo) {
-//           return res.status(404).send({
-//             message: 'Todo Not Found',
-//           });
-//         }
-//         return res.status(200).send(todo);
-//       })
-//       .catch(error => res.status(400).send(error));
-//   })
+router.route('/todos/:id')
+  // Get a specific todo
+  .get((req, res) => {
+    Todo.findById(
+      req.params.Id, {
+        include: [{
+          model: TodoItem,
+          as: 'todoItems',
+        }],
+      })
+      .then(todo => {
+        if (!todo) {
+          return res.send({
+            message: 'Todo Not Found',
+          });
+        }
+        return res.send(todo);
+      })
+      .catch(error => res.send(error));
+  })
 
   // // List all todos
   // app.get('/api/todos', todosController.list);
