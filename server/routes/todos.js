@@ -3,8 +3,7 @@ const router = express.Router();
 const Todo = require('../models').Todo;
 const TodoItem = require('../models').TodoItem;
 
-
-router.route('/todos')
+router.route('/')
   // Post a todo
   .post((req, res) => {
     Todo.create({
@@ -25,11 +24,11 @@ router.route('/todos')
      .catch(error => res.send(error));
   })
 
-router.route('/todos/:id')
+router.route('/:id')
   // Get a specific todo
   .get((req, res) => {
     Todo.findById(
-      req.params.Id, {
+      req.params.id, {
         include: [{
           model: TodoItem,
           as: 'todoItems',
@@ -45,16 +44,31 @@ router.route('/todos/:id')
       })
       .catch(error => res.send(error));
   })
+  // Edit a specific todo
+  .put((req, res) => {
+    Todo.update({
+      title: req.body.title,
+    }, {
+      where: {
+        id : req.params.id
+      }
+    })
+    .then((todo) =>{
+      res.send('succesfully updated todo');
+    })
+    .catch(error => res.send(error));
+  })
+  // Delete a specific Todo
+  .delete((req, res) => {
+    Todo.destroy({
+      where: {
+        id : req.params.id
+      }
+    })
+    .then((todo) =>{
+      res.send('succesfully deleted todo');
+    })
+    .catch(error => res.send(error));
+  })
 
-  // // List all todos
-  // app.get('/api/todos', todosController.list);
-  // // Get a specific todo
-  // app.get('/api/todos/:todoId', todosController.retrieve);
-  // // Edit a todo
-  // app.put('/api/todos/:todoId', todosController.update);
-  // // Delete a todo
-  // app.delete('/api/todos/:todoId', todosController.destroy);
-
-  // // Post a todo item related to do
-  // app.post('/api/todos/:todoId/items', todoItemsController.create);
 module.exports = router
