@@ -25,6 +25,7 @@ router.route('/')
   })
 
 router.route('/:id')
+
   // Get a specific todo
   .get((req, res) => {
     Todo.findById(
@@ -44,6 +45,7 @@ router.route('/:id')
       })
       .catch(error => res.send(error));
   })
+
   // Edit a specific todo
   .put((req, res) => {
     Todo.update({
@@ -58,6 +60,7 @@ router.route('/:id')
     })
     .catch(error => res.send(error));
   })
+
   // Delete a specific Todo
   .delete((req, res) => {
     Todo.destroy({
