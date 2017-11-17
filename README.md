@@ -5,7 +5,7 @@
 - Fork and Clone
 - run `npm init --yes`
 - run `npm install`
-- run `createdb todos`
+- create database todos in your psql cli
 - configure config.json file with your postgreSQL environment
   - mkdir `server/config` 
   - touch `server/config/config.json`
