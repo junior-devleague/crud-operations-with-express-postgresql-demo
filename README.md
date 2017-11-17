@@ -24,9 +24,6 @@
   ```
 - cd into server directory then run `sequelize db:migrate`
 
-## PostgreSQL Relational 
-We will have two models `Todo` and `TodoItem`. The relationship between to the will be `one to many`, such that a `Todo` can have many `TodoItem` while a `TodoItem` can only belong to one `Todo`. 
-
 ## API Endpoints
 Run the following on Postman
 
