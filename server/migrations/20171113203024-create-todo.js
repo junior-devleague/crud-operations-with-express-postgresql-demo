@@ -13,12 +13,8 @@ module.exports = {
       },
       completed: {
         type: Sequelize.BOOLEAN,
+        allowNull: false,
         defaultValue: false,
-        set: function(value) {
-          if (value === 'true') value = true;
-          if (value === 'false') value = false;
-          this.setDataValue('completed', value);
-        }
       },
       createdAt: {
         allowNull: false,

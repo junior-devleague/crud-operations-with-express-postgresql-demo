@@ -7,6 +7,7 @@ router.route('/')
   .post((req, res) => {
     Todo.create({
        title: req.body.title,
+       completed: req.body.completed,
     })
      .then(todo => res.send(todo))
      .catch(error => res.send(error));
@@ -39,6 +40,7 @@ router.route('/:id')
   .put((req, res) => {
     Todo.update({
       title: req.body.title,
+      completed: req.body.completed
     }, {
       where: {
         id : req.params.id
