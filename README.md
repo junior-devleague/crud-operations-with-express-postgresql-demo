@@ -7,8 +7,8 @@
 - run `npm install`
 - run `createdb todos`
 - configure config.json file with your postgreSQL environment
-  - mkdir `config` 
-  - touch `config/config.json`
+  - mkdir `server/config` 
+  - touch `server/config/config.json`
   - add the following code snippet
   ```
   {
@@ -22,7 +22,7 @@
     }
   }
   ```
-- run `sequelize db:migrate`
+- cd into server directory then run `sequelize db:migrate`
 
 ## PostgreSQL Relational 
 We will have two models `Todo` and `TodoItem`. The relationship between to the will be `one to many`, such that a `Todo` can have many `TodoItem` while a `TodoItem` can only belong to one `Todo`. 
