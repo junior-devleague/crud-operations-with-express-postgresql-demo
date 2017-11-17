@@ -33,11 +33,6 @@ Run the following on Postman
 `Todo` Endpoints:
 - POST `127.0.0.1:8000/api/todos/`
 - GET(List all) `127.0.0.1:8000/api/todos/`
-- GET(Specific) `127.0.0.1:8000/api/todos/:todoId`
-- PUT `127.0.0.1:8000/api/todos/:todoId`
-- DELETE `127.0.0.1:8000/api/todos/:todoId`
-
-`TodoItem` EndPoints:
-- POST `127.0.0.1:8000/api/todos/:todoId/items`
-
-
+- GET(Specific) `127.0.0.1:8000/api/todos/:id`
+- PUT `127.0.0.1:8000/api/todos/:id`
+- DELETE `127.0.0.1:8000/api/todos/:id`
