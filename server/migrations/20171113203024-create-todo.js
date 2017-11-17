@@ -11,6 +11,15 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      completed: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        set: function(value) {
+          if (value === 'true') value = true;
+          if (value === 'false') value = false;
+          this.setDataValue('completed', value);
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

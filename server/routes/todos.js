@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Todo = require('../models').Todo;
-const TodoItem = require('../models').TodoItem;
 
 router.route('/')
   // Post a todo
@@ -14,12 +13,7 @@ router.route('/')
   })
   // Get all todos
   .get((req, res) => {
-    Todo.findAll({
-      include: [{
-        model: TodoItem,
-        as: 'todoItems',
-      }],
-    })
+    Todo.findAll()
      .then(todo => res.send(todo))
      .catch(error => res.send(error));
   })
@@ -29,12 +23,7 @@ router.route('/:id')
   // Get a specific todo
   .get((req, res) => {
     Todo.findById(
-      req.params.id, {
-        include: [{
-          model: TodoItem,
-          as: 'todoItems',
-        }],
-      })
+      req.params.id)
       .then(todo => {
         if (!todo) {
           return res.send({
