@@ -1,9 +1,17 @@
 # Rest API with PostgreSQL Demo
 [Intermediate] Express Server, PostgresSQL, REST API
 
+## Installation
+- Install Postgres for Windows https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+  - Select version `9.6.10`
+  - Select operating system `Windows x86-64`
+  
+- Install Postman https://www.getpostman.com/apps
+
+- Install nodemon `npm install -g nodemon`
+
 ## Setup
-- Fork and Clone
-- If you don't have nodemon already installed, run `npm install -g nodemon`
+- Fork and clone 
 - run `npm init --yes`
 - run `npm install`
 - create a database called `my_todo_list` in your psql cli
