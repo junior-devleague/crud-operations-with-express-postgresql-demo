@@ -12,7 +12,6 @@
 
 ## Setup
 - Fork and clone 
-- run `npm init --yes`
 - run `npm install`
 - create a database called `my_todo_list` in your psql cli
 - configure config.json file with your postgreSQL environment
