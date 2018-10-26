@@ -15,7 +15,7 @@
   - **PUT:** Submit updated data for targeted value in database
   - **DELETE:** Deletes specific value from database
   
-  ![CRUD Table](http://docs.railsbridge.org/job-board/img/crud_grid.jpg)
+  ![CRUD Table](https://i.imgur.com/cudjq5X.jpg?2)
 
 
 ## Installation
