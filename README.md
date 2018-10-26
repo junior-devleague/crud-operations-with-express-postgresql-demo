@@ -1,4 +1,4 @@
-# CRUD Routes with Express Server, Sequelize, and Postgres
+# CRUD Operations with Express Server, Sequelize, and Postgres
 [Intermediate] Explaining Restful API, CRUD, HTTP Verbs
 
 ## What is a RESTful API
