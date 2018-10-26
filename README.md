@@ -1,5 +1,22 @@
-# Rest API with PostgreSQL Demo
-[Intermediate] Express Server, PostgresSQL, REST API
+# CRUD Routes with Express Server, Sequelize, and Postgres
+[Intermediate] Explaining Restful API, CRUD, HTTP Verbs
+
+## What is a RESTful API
+- What is an API?
+  - An API for a website is code that allows two software programs to communicate with each another.
+- What is REST API?
+  - Representational State Transfer
+    - An application that uses HTTP requests to GET, PUT, POST and DELETE data.
+    - It is a set of rules that developers follow when they create their API. 
+    - The client and the server should be independent of each other
+- HTTP Verbs
+  - **GET:** Retrieve data from database to client 
+  - **POST:** Submit data from client to database
+  - **PUT:** Submit updated data for targeted value in database
+  - **DELETE:** Deletes specific value from database
+  
+  ![CRUD Table](http://docs.railsbridge.org/job-board/img/crud_grid.jpg)
+
 
 ## Installation
 - Install Postgres for Windows https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
@@ -42,3 +59,6 @@ Run the following on Postman
 - GET(Specific) `127.0.0.1:8000/api/todos/:id`
 - PUT `127.0.0.1:8000/api/todos/:id`
 - DELETE `127.0.0.1:8000/api/todos/:id`
+
+## Resources
+[Restful API](https://searchmicroservices.techtarget.com/definition/RESTful-API)
